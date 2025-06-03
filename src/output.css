@@ -578,6 +578,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -588,6 +592,10 @@ video {
 
 .left-56 {
   left: 14rem;
+}
+
+.left-\[10\%\] {
+  left: 10%;
 }
 
 .right-0 {
@@ -604,54 +612,6 @@ video {
 
 .top-20 {
   top: 5rem;
-}
-
-.left-1 {
-  left: 0.25rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
-.left-5 {
-  left: 1.25rem;
-}
-
-.left-8 {
-  left: 2rem;
-}
-
-.left-10 {
-  left: 2.5rem;
-}
-
-.left-12 {
-  left: 3rem;
-}
-
-.left-1\/4 {
-  left: 25%;
-}
-
-.left-\[1\/4\] {
-  left: 1/4;
-}
-
-.left-\[1\/5\] {
-  left: 1/5;
-}
-
-.left-\[10\%\] {
-  left: 10%;
-}
-
-.bottom-5 {
-  bottom: 1.25rem;
-}
-
-.bottom-8 {
-  bottom: 2rem;
 }
 
 .z-50 {
@@ -737,6 +697,10 @@ video {
   height: 100%;
 }
 
+.w-1\/12 {
+  width: 8.333333%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -805,8 +769,8 @@ video {
   width: 100%;
 }
 
-.w-1\/12 {
-  width: 8.333333%;
+.w-3\/5 {
+  width: 60%;
 }
 
 .basis-2\/3 {
@@ -898,6 +862,10 @@ video {
 
 .self-end {
   align-self: flex-end;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-2xl {
@@ -1061,6 +1029,14 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1069,6 +1045,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .ease-in-out {

@@ -1,43 +1,83 @@
 #loader {
-width: 50px;
-aspect-ratio: 1;
-background: #ffd738;
-border-radius: 50%;
-display: grid;
+    width: 50px;
+    aspect-ratio: 1;
+    background: #ffd738;
+    border-radius: 50%;
+    display: grid;
 }
 #loader::before,
 #loader::after {
-content: "";
-grid-area: 1/1;
-background: inherit;
-clip-path: polygon(0 0,50% 40%,100% 0,60% 50%,100% 100%,50% 60%,0 100%,40% 50%);
-animation: l1 .8s infinite alternate;
-transform: rotate(var(--r,0)) scale(0.8) 
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    clip-path: polygon(0 0,50% 40%,100% 0,60% 50%,100% 100%,50% 60%,0 100%,40% 50%);
+    animation: l1 .8s infinite alternate;
+    transform: rotate(var(--r,0)) scale(0.8) 
 }
 #loader::after {
---r:45deg; 
+    --r:45deg; 
 }
 @keyframes l1 {
-100% {transform:rotate(var(--r,0)) scale(1.4) }
+    100% {transform:rotate(var(--r,0)) scale(1.4) }
 }
 /* 腳印 */
 #footprint {
-width: calc(6*30px);
-height: 50px;
-display: flex;
-color: #8d7958;
-filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) 
-drop-shadow(120px 0 0 currentColor);
-clip-path: inset(0 100% 0 0);
-animation: l11 4s infinite steps(7);
+    width: calc(6*30px);
+    height: 50px;
+    display: flex;
+    color: #8d7958;
+    filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) 
+    drop-shadow(120px 0 0 currentColor);
+    clip-path: inset(0 100% 0 0);
+    animation: l11 4s infinite steps(7);
 }
 #footprint:before {
-content: "";
-width: 30px;
-height: 25px;
-background: currentColor;
-clip-path: polygon(0 50%,30% 40%,100% 0,60% 40%,100% 50%,60% 60%,100% 100%,30% 60%);
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: currentColor;
+    clip-path: polygon(0 50%,30% 40%,100% 0,60% 40%,100% 50%,60% 60%,100% 100%,30% 60%);
 }
 @keyframes l11 {
-100% {clip-path: inset(0 -30px 0 0)}
+    100% {clip-path: inset(0 -30px 0 0)}
+}
+
+.bannerwave {
+    animation: wave 4s infinite;
+}
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-50px);}
+    100% {transform: translateX(0);}
+}
+.bannerwave2 {
+    animation: wave2 4s infinite;
+}
+@keyframes wave2 {
+    0% {transform: translateX(-50px);}
+    50% {transform: translateX(0px);}
+    100% {transform: translateX(-50px);}
+}
+#butterfly {
+    animation: fly 50s infinite;
+}
+@keyframes fly {
+    0% {
+        transform: translateX(0)translateY(0);
+    }
+    25% {
+        transform:translateX(-35vw) translateY(-10vh);
+    }
+    49% {
+        transform: translateX(-69vw) scaleX(1);
+    }
+    50% {
+        transform: translateX(-70vw)translateY(0) scaleX(-1);
+    }
+    99% {
+        transform: translateX(-1px) scaleX(-1);
+    }
+    100% {
+        transform: translateX(0)translateY(0) scaleX(1);
+    }
 }

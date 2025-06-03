@@ -58,7 +58,7 @@
                 <img src="pic/banner.png" alt="" class="w-60">
                 <p class="text-4xl pt-6" style="writing-mode: vertical-lr;">你的植物從此綠意盎然</p>
             </div>
-            <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
+            <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2 ">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
             <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
         </section>
         <!-- @md -->
@@ -70,8 +70,8 @@
             </div>
             <img src="pic/banner.png" alt="" class="w-[500px]">
             <div class="basis-2/6 flex flex-col justify-between h-full">
-                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2 self-end">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
-                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
+                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2 self-end bannerwave">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
+                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2 bannerwave2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
             </div>
             <img src="pic/lilflower.png" alt="" class="absolute bottom-8 left-[10%] w-1/12">
         </section>
@@ -139,7 +139,7 @@
         <section class="relative md:mt-32">
             <div class="absolute h-48 -top-48 right-1/2 hidden md:block"><img src="pic/orchid.png" alt="" width="202"></div>
             <div class="w-full h-64 bg-brand-green [clip-path:polygon(0%_0%,_0%_80%,_100%_100%,_100%_20%)] flex 
-            md:[clip-path:polygon(0%_0%,_0%_100%,_100%_100%,_100%_0%)] md:w-8/12 md:justify-end">
+            md:[clip-path:polygon(0%_0%,_0%_100%,_100%_100%,_100%_0%)] md:w-8/12 md:justify-end transition duration-700 " id="illustration">
                 <div class="w-1/3">
                     <p class="text-4xl w-[3em] p-4 md:text-6xl">植物圖鑑</p>
                     <img src="pic/illustration_img.png" alt="" class="w-28 ml-8 md:-ml-8">                    
@@ -148,12 +148,14 @@
             <img src="pic/illustration.png" alt="" class="absolute bottom-0 left-1/2 w-48 md:left-8 md:w-1/5 hover:scale-110 transition-transform cursor-pointer">
         </section>
         <!-- 澆水提醒 -->
-        <section class="relative flex justify-end md:mt-32">
-            <div class="w-full h-64 bg-brand-pink [clip-path:polygon(0%_20%,_0%_100%,_100%_80%,_100%_0%)] flex justify-end 
-            md:[clip-path:polygon(0%_0%,_0%_100%,_100%_100%,_100%_0%)] md:w-8/12 md:justify-start">
-                <div class="w-1/3 md:ml-40">
-                    <p class="text-4xl w-[3em] p-4 md:text-6xl">澆水提醒</p>
-                    <img src="pic/watering_img.png" alt="" class="w-28 -ml-8 md:ml-16">                    
+        <section class="relative flex justify-end md:mt-32 ">
+            <div class="overflow-hidden w-full flex justify-end">
+                <div class="w-full h-64 bg-brand-pink [clip-path:polygon(0%_20%,_0%_100%,_100%_80%,_100%_0%)] flex justify-end 
+                md:[clip-path:polygon(0%_0%,_0%_100%,_100%_100%,_100%_0%)] md:w-8/12 md:justify-start transition duration-700 " id="watering">
+                    <div class="w-1/3 md:ml-40">
+                        <p class="text-4xl w-[3em] p-4 md:text-6xl">澆水提醒</p>
+                        <img src="pic/watering_img.png" alt="" class="w-28 -ml-8 md:ml-16">                    
+                    </div>
                 </div>
             </div>
             <img src="pic/watering.png" alt="" class="absolute bottom-0 right-1/2 w-48 md:w-1/5 md:right-8 hover:scale-110 transition-transform cursor-pointer">
@@ -168,44 +170,6 @@
             <a href="" onclick="alert('沒有EMAIL');return false"><p><i class="fa-solid fa-envelope"></i> Plantandchill@gmail.com</p></a>
         </div>
     </footer>
-    <script>
-        const menuButton = document.getElementById('menuButton');
-        const closeMenuButton = document.getElementById('closeMenuButton');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.remove('translate-x-full');
-            mobileMenu.classList.add('translate-x-0');
-        });
-
-        closeMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-            mobileMenu.classList.remove('translate-x-0');
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300);
-        });
-        document.addEventListener('click', function(event) {
-            const isClickInsideMenu = mobileMenu.contains(event.target);
-            const isClickOnMenuButton = menuButton.contains(event.target);
-
-            if (!isClickInsideMenu && !isClickOnMenuButton && !mobileMenu.classList.contains('hidden')) {
-                closeMenuButton.click();
-            }
-        });
-        //蝴蝶
-        let butterfly = document.getElementById('butterfly')
-        let i = 1
-        function changeImage(){
-            butterfly.src=`pic/butterfly/${i}.png`
-            i+=1
-            if(i>3){
-                i=1
-            }
-        }
-        setInterval(changeImage, 300)
-
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
