@@ -18,9 +18,9 @@
         }
     </style>
 </head>
-<body class="bg-[size:100%_auto] bg-[url('pic/bg.png')] *:text-brand-text" >
+<body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed  *:text-brand-text md:bg-[size:100%_auto]" >
     <header class=" left-0 right-0 z-50 p-4 flex justify-between items-center bg-brand-green ">
-        <img src="pic/logo.png" alt="" class="w-28">
+        <img src="pic/logo.png" alt="" class="w-20">
         <button id="menuButton" class="text-gray-700 focus:outline-none md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -58,8 +58,8 @@
                 <img src="pic/banner.png" alt="" class="w-60">
                 <p class="text-4xl pt-6" style="writing-mode: vertical-lr;">你的植物從此綠意盎然</p>
             </div>
-            <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl p-2 m-2">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
-            <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl p-2 m-2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
+            <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
+            <div class="w-4/5 text-lg tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
         </section>
         <!-- @md -->
         <section class="bg-[url('pic/bg2.png')] bg-[size:100vw_100%] bg-no-repeat pb-28 hidden md:flex justify-center items-center h-[700px] relative">
@@ -70,8 +70,8 @@
             </div>
             <img src="pic/banner.png" alt="" class="w-[500px]">
             <div class="basis-2/6 flex flex-col justify-between h-full">
-                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl p-2 m-2 self-end">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
-                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl p-2 m-2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
+                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2 self-end">提供最簡單易懂的植物照顧撇步，搭配貼心提醒，讓植物輕鬆活下來!</div>
+                <div class="w-4/5 text-xl tracking-[0.5em] bg-white rounded-2xl pl-5 m-2 py-2">專為忙碌的你設計，從此不再忘記澆水、施肥，植物小白也能變專家!</div>
             </div>
         </section>
         <!-- 網站特色 -->
@@ -92,19 +92,19 @@
                     <p class="text-">擺脫複雜專業技術，只給你最關鍵的照顧資訊</p>
                 </div>
                 <div class="w-1/2 flex flex-col items-center gap-2 md:mt-60">
-                    <img src="pic/features/3.png" alt="" class="w-3/4 hover:scale-110 transition-transform">
+                    <img src="pic/features/3.png" alt="" class="w-3/4 hover:scale-110 transition-transform ">
                     <p class="text-2xl">貼心自動提醒</p>
                     <p class="text-">再也不用擔心忘記澆水!客製化提醒讓你輕鬆掌握植物生長</p>
                 </div>
             </div>
         </section>
         <!-- 使用說明 -->
-        <section class="flex flex-col justify-center items-center gap-6 mb-32 md:max-w-4xl md:m-auto relative">
+        <section class="flex flex-col justify-center items-center gap-6 my-32 md:max-w-4xl md:m-auto relative">
             <div class="absolute top-20 -left-8 scale-50 rotate-[110deg] md:scale-100 md:left-3/4 md:top-40" id="footprint"></div>
             <img src="pic/instructions/Group 9.png" alt="" class="w-48 md:w-1/4">
             <div class="flex flex-col items-center gap-2 md:self-start md:w-1/4">
                 <div class="relative w-full">
-                    <img src="pic/instructions/1.png" alt="" class="w-full hover:scale-110 transition-transform">
+                    <img src="pic/instructions/1.png" alt="" class="hover:scale-110 transition-transform w-3/4 m-auto md:w-full">
                     <p class="absolute top-0 rounded-full bg-brand-text text-white w-8 h-8 text-center leading-8">1</p>
                 </div>
                 <p class="text-2xl">尋找你的植物</p>
@@ -112,7 +112,7 @@
             <img src="pic/instructions/Group 11.png" alt="" class="w-2/5 -my-44 hidden md:block">
             <div class="flex flex-col items-center gap-2 md:self-end md:w-1/4">
                 <div class="relative w-full">
-                    <img src="pic/instructions/2.png" alt="" class="w-full hover:scale-110 transition-transform">
+                    <img src="pic/instructions/2.png" alt="" class="hover:scale-110 transition-transform w-3/4 m-auto md:w-full">
                     <p class="absolute top-0 rounded-full bg-brand-text text-white w-8 h-8 text-center leading-8">2</p>
                 </div>
                 <p class="text-2xl">了解照顧方式</p>
@@ -120,7 +120,7 @@
             <img src="pic/instructions/Group 12.png" alt="" class="w-2/5 -my-44 hidden md:block">
             <div class="flex flex-col items-center gap-2 md:self-start md:w-1/4">
                 <div class="relative w-full">
-                    <img src="pic/instructions/3.png" alt="" class="w-full hover:scale-110 transition-transform">
+                    <img src="pic/instructions/3.png" alt="" class="hover:scale-110 transition-transform w-3/4 m-auto md:w-full">
                     <p class="absolute top-0 rounded-full bg-brand-text text-white w-8 h-8 text-center leading-8">3</p>
                 </div>
                 <p class="text-2xl">設定貼心提醒</p>
@@ -128,7 +128,7 @@
             <img src="pic/instructions/Group 13.png" alt="" class="w-2/5 -my-44 hidden md:block">
             <div class="flex flex-col items-center gap-2 md:self-end md:w-1/4">
                 <div class="relative w-full">
-                    <img src="pic/instructions/4.png" alt="" class="w-full hover:scale-110 transition-transform">
+                    <img src="pic/instructions/4.png" alt="" class="hover:scale-110 transition-transform w-3/4 m-auto md:w-full">
                     <p class="absolute top-0 rounded-full bg-brand-text text-white w-8 h-8 text-center leading-8">4</p>
                 </div>
                 <p class="text-2xl">享受綠意生活</p>
@@ -161,7 +161,7 @@
     <footer class="bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8">
         <p class="text-sm">&copy;2025 Plant&Chill. All Rights Reserved.</p>
         <img src="pic/logo.png" alt="" class="hidden md:block w-36 my-4">
-        <div >
+        <div class="[&_p]:text-xs basis-2/3 flex flex-col items-end md:basis-1/5">
             <a href="" onclick="alert('沒有FB');return false"><p><i class="fa-brands fa-facebook"></i> Facebook</p></a>
             <a href="" onclick="alert('沒有IG');return false"><p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
             <a href="" onclick="alert('沒有EMAIL');return false"><p><i class="fa-solid fa-envelope"></i> Plantandchill@gmail.com</p></a>
