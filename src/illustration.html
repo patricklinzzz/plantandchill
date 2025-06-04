@@ -20,8 +20,8 @@
             </svg>
         </button>
         <nav class="hidden md:flex">
-            <ul class="flex justify-end gap-8 px-4 rounded-3xl bg-brand-text  *:text-white *:block *:text-lg *:py-2">
-                <li><a href="illustration.html">植物圖鑑</a></li>
+            <ul class="flex justify-end gap-8 px-4 rounded-3xl bg-brand-text py-2 *:text-white *:block *:text-lg navhover">
+                <li class="border-b-2"><a href="illustration.html">植物圖鑑</a></li>
                 <li><a href="#">我的植物</a></li>
                 <li><a href="#">聯繫我們</a></li>
                 <li><a href="#">關於我們</a></li>
@@ -60,8 +60,8 @@
                 <button id="carnivorous_btn">食蟲植物</button>
                 <button id="succulent_btn">多肉植物</button>
             </div>
-            <div class="flex flex-wrap justify-around  [&_img]:rounded-3xl gap-4 [&>div]:w-[calc(200px-8px)] [&_div]:h-full parent-container *:cursor-pointer">
-                <div class="medicinal">
+            <div class="flex flex-wrap justify-around  [&_img]:rounded-3xl gap-4 [&>div]:w-[calc(200px-8px)] [&_div]:h-full parent-container *:cursor-pointer ">
+                <div class="medicinal" id="Catharathus">
                     <img src="pic/illustration/1.png" alt="">
                     <p>日日春 <br> Catharathus roseus</p>
                 </div>
@@ -110,6 +110,38 @@
                     <p>小毛氈苔<br>Drosera spathulata</p>
                 </div>
             </div>
+            <div id="plant_window" class="hidden">
+                <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 p-10 flex flex-col items-start gap-4 border-b border-l border-white/[.4] bg-gradient-to-tr from-[#e7e7e5b5] to-[#d0d2cfd2] shadow-lg backdrop-blur-md rounded-2xl w-[80vw] md:w-[40vw] " >
+                    <button class="absolute -right-7 -top-6 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" id="close"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="w-full h-32 overflow-hidden flex justify-center items-center rounded-2xl">
+                        <img src="pic/illustration/1.png" alt="" class="w-full">
+                    </div>
+                    <div class="w-full flex items-center justify-between">
+                        <p class="text-3xl text-brand-text font-bold">日日春 <br>Catharathus roseus</p>
+                        <button class="h-8 p-3 bg-pink-300 text-pink-800 rounded-full font-extrabold text-lg flex items-center justify-center hover:bg-gray-800 hover:text-white">
+                            <i class="fa-solid fa-heart">   
+                                收藏
+                            </i>
+                        </button>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xl">
+                            栽培方式
+                        </p>
+                        </p>
+                            日日春花喜溫暖、陽光充足及排水良好土壤，耐旱，耐貧瘠，多年生草本，但不耐寒，所以冬天生長較差，南部可以多年生栽培，北部以夏季草花為主，冬季要防寒。莖枝細長強健，分枝多，但為夾竹桃科，全株有毒，折斷其莖葉，會流出有毒的白色乳汁，還會散發特殊臭味。
+                        </p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xl">
+                            繁殖方式
+                        </p>
+                        </p>
+                            全年均可播種，但以20-25℃為適合的發芽溫度，種子嫌光性，需覆土才易發芽，約7-10日發芽。
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8">
@@ -121,6 +153,7 @@
             <a href="" onclick="alert('沒有EMAIL');return false"><p><i class="fa-solid fa-envelope"></i> Plantandchill@gmail.com</p></a>
         </div>
     </footer>
+    <script src="hamburger.js"></script>
     <script src="illustration.js"></script>
 </body>
 </html>

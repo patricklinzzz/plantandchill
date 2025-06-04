@@ -87,9 +87,13 @@
         transform: translateX(0)translateY(0) scaleX(1);
     }
 }
-
+/* 圖鑑放大 */
 .parent-container > div:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
     z-index: 10;
+}
+/* nav hover */
+.navhover > li:hover {
+    color: #16a34a;
 }

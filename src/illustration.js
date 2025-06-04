@@ -67,4 +67,12 @@ succulent_btn.onclick = function() {
     }
 };
 
-
+let closewin = document.getElementById('close')
+let plant_window = document.getElementById('plant_window')
+let Catharathus = document.getElementById('Catharathus')
+Catharathus.onclick = function () {
+    plant_window.style.display='block'
+}
+closewin.onclick = function () {
+    plant_window.style.display='none'
+}
