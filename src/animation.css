@@ -97,3 +97,24 @@
 .navhover > li:hover {
     color: #16a34a;
 }
+/* 水滴 */
+@keyframes waterDropAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+.animate-water-drop {
+    animation: waterDropAnimation 2s infinite;
+}
+.animate-water-drop2 {
+    animation: waterDropAnimation 2.1s infinite;
+}
+.animate-water-drop3 {
+    animation: waterDropAnimation 2.2s infinite;
+}
