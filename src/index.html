@@ -8,18 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha 1 512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpol 2 icy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kosugi+Maru&family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <title>首頁</title>
     <link rel="stylesheet" href="animation.css">
-    <style>
-        *{
-            font-family: "Noto Sans TC", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-    </style>
 </head>
-<body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed  *:text-brand-text md:bg-[size:100%_auto]" >
-    <header class=" left-0 right-0 z-50 p-4 flex justify-between items-center bg-brand-green ">
+<body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] *:text-brand-text" >
+    <header class=" left-0 right-0 z-50 px-4 flex justify-between items-center bg-brand-green ">
         <img src="pic/logo.png" alt="" class="w-20">
         <button id="menuButton" class="text-gray-700 focus:outline-none md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
@@ -28,7 +21,7 @@
         </button>
         <nav class="hidden md:flex">
             <ul class="flex justify-end gap-8 px-4 rounded-3xl bg-brand-text  *:text-white *:block *:text-lg *:py-2">
-                <li><a href="#">植物圖鑑</a></li>
+                <li><a href="illustration.html">植物圖鑑</a></li>
                 <li><a href="#">我的植物</a></li>
                 <li><a href="#">聯繫我們</a></li>
                 <li><a href="#">關於我們</a></li>
@@ -43,7 +36,7 @@
                 </button>
             </div>
             <ul class="space-y-4">
-                <li><a href="#" class="block text-gray-700 hover:text-green-600 text-lg py-2">植物圖鑑</a></li>
+                <li><a href="illustration.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">植物圖鑑</a></li>
                 <li><a href="#" class="block text-gray-700 hover:text-green-600 text-lg py-2">我的植物</a></li>
                 <li><a href="#" class="block text-gray-700 hover:text-green-600 text-lg py-2">聯繫我們</a></li>
                 <li><a href="#" class="block text-gray-700 hover:text-green-600 text-lg py-2">關於我們</a></li>
@@ -145,7 +138,7 @@
                     <img src="pic/illustration_img.png" alt="" class="w-28 ml-8 md:-ml-8">                    
                 </div>
             </div>
-            <img src="pic/illustration.png" alt="" class="absolute bottom-0 left-1/2 w-48 md:left-8 md:w-1/5 hover:scale-110 transition-transform cursor-pointer">
+            <a href="illustration.html"><img src="pic/illustration.png" alt="" class="absolute bottom-0 left-1/2 w-48 md:left-8 md:w-1/5 hover:scale-110 transition-transform"></a>
         </section>
         <!-- 澆水提醒 -->
         <section class="relative flex justify-end md:mt-32 ">
@@ -164,7 +157,7 @@
     <footer class="bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8">
         <p class="text-sm">&copy;2025 Plant&Chill. All Rights Reserved.</p>
         <img src="pic/logo.png" alt="" class="hidden md:block w-36 my-4">
-        <div class="[&_p]:text-xs basis-2/3 flex flex-col items-end md:basis-1/5">
+        <div class="[&_p]:text-xs  flex flex-col items-start md:[&_p]:text-lg w-fit">
             <a href="" onclick="alert('沒有FB');return false"><p><i class="fa-brands fa-facebook"></i> Facebook</p></a>
             <a href="" onclick="alert('沒有IG');return false"><p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
             <a href="" onclick="alert('沒有EMAIL');return false"><p><i class="fa-solid fa-envelope"></i> Plantandchill@gmail.com</p></a>

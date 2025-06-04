@@ -1,3 +1,9 @@
+:root{
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 #loader {
     width: 50px;
     aspect-ratio: 1;
@@ -80,4 +86,10 @@
     100% {
         transform: translateX(0)translateY(0) scaleX(1);
     }
+}
+
+.parent-container > div:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
 }
