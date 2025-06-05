@@ -66,13 +66,34 @@ succulent_btn.onclick = function() {
         succulent[i].style.display = 'block';
     }
 };
-
+// 跳小視窗
 let closewin = document.getElementById('close')
 let plant_window = document.getElementById('plant_window')
 let Catharathus = document.getElementById('Catharathus')
+let mask = document.getElementById('mask')
+
+let body = document.body
+let scrollY = 0
+
 Catharathus.onclick = function () {
     plant_window.style.display='block'
+    scrollY = window.scrollY
+    mask.style.position='fixed'
+    mask.style.display='block'
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.overflowY = 'scroll'
+    body.style.width = '100%'
+}
+mask.onclick = function () {
+    plant_window.style.display='none'
+    body.style.position = ''
+    window.scrollTo(0, scrollY)
+    mask.style.display='none'
 }
 closewin.onclick = function () {
     plant_window.style.display='none'
+    body.style.position = ''
+    window.scrollTo(0, scrollY)
+    mask.style.display='none'
 }

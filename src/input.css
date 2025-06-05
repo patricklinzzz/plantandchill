@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.headercss {
+    @apply left-0 right-0 z-50 px-4 flex justify-between items-center bg-brand-green;
+}
+.footercss {
+    @apply bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8;
+}

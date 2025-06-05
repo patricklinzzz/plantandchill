@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="animation.css">
 </head>
 <body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] *:text-brand-text" >
-    <header class=" left-0 right-0 z-50 px-4 flex justify-between items-center bg-brand-green ">
+    <header class="headercss">
         <img src="pic/logo.png" alt="" class="w-20">
         <button id="menuButton" class="text-gray-700 focus:outline-none md:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
@@ -133,29 +133,29 @@
             <div class="absolute h-48 -top-48 right-1/2 hidden md:block"><img src="pic/orchid.png" alt="" width="202"></div>
             <div class="w-full h-64 bg-brand-green [clip-path:polygon(0%_0%,_0%_80%,_100%_100%,_100%_20%)] flex 
             md:[clip-path:polygon(0%_0%,_0%_100%,_100%_100%,_100%_0%)] md:w-8/12 md:justify-end transition duration-700 " id="illustration">
-                <div class="w-1/3">
-                    <p class="text-4xl w-[3em] p-4 md:text-6xl">植物圖鑑</p>
+                <div class="w-1/3 flex flex-col items-end justify-center">
+                    <p class="text-4xl w-[3em] p-4 md:text-6xl md:w-[5em] ">植物圖鑑</p>
                     <img src="pic/illustration_img.png" alt="" class="w-28 ml-8 md:-ml-8">                    
                 </div>
             </div>
-            <a href="illustration.html"><img src="pic/illustration.png" alt="" class="absolute bottom-0 left-1/2 w-48 md:left-8 md:w-1/5 hover:scale-110 transition-transform"></a>
+            <a href="illustration.html"><img src="pic/illustration.png" alt="" class="absolute bottom-0 left-1/2 w-48 md:left-[8%] md:w-1/5 hover:scale-110 transition-transform"></a>
         </section>
         <!-- 澆水提醒 -->
         <section class="relative flex justify-end md:mt-32 ">
             <div class="overflow-hidden w-full flex justify-end">
                 <div class="w-full h-64 bg-brand-pink [clip-path:polygon(0%_20%,_0%_100%,_100%_80%,_100%_0%)] flex justify-end 
                 md:[clip-path:polygon(0%_0%,_0%_100%,_100%_100%,_100%_0%)] md:w-8/12 md:justify-start transition duration-700 " id="watering">
-                    <div class="w-1/3 md:ml-40">
-                        <p class="text-4xl w-[3em] p-4 md:text-6xl">澆水提醒</p>
+                    <div class="w-1/3 flex flex-col justify-center ">
+                        <p class="text-4xl w-[3em] p-4 md:text-6xl md:w-[5em]">澆水提醒</p>
                         <img src="pic/watering_img.png" alt="" class="w-28 -ml-8 md:ml-16">                    
                     </div>
                 </div>
             </div>
             <a href="myplant.html">
-            <img src="pic/watering.png" alt="" class="absolute bottom-0 right-1/2 w-48 md:w-1/5 md:right-8 hover:scale-110 transition-transform cursor-pointer"></a>
+            <img src="pic/watering.png" alt="" class="absolute bottom-0 right-1/2 w-48 md:w-1/5 md:right-[8%] hover:scale-110 transition-transform cursor-pointer"></a>
         </section>
     </main>
-    <footer class="bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8">
+    <footer class="footercss">
         <p class="text-sm">&copy;2025 Plant&Chill. All Rights Reserved.</p>
         <img src="pic/logo.png" alt="" class="hidden md:block w-36 my-4">
         <div class="[&_p]:text-xs  flex flex-col items-start md:[&_p]:text-lg w-fit">
