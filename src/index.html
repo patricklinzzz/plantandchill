@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="animation.css">
 </head>
 <body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] *:text-brand-text" >
+    <button id="scrollTopBtn" title="回到頂部" class="scrolltopcss">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <header class="headercss">
         <img src="pic/logo.png" alt="" class="w-20">
         <button id="menuButton" class="text-gray-700 focus:outline-none md:hidden">
@@ -27,12 +30,10 @@
                 <li><a href="#">關於我們</a></li>
             </ul>
         </nav>
-        <nav id="mobileMenu" class="hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 z-50 transform transition-transform duration-300 ease-in-out translate-x-full">
+        <nav id="mobileMenu" class="mbmenucss">
             <div class="flex justify-end mb-4">
                 <button id="closeMenuButton" class="text-gray-700 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <i class="fa-solid fa-xmark text-white text-2xl"></i>
                 </button>
             </div>
             <ul class="space-y-4">
@@ -45,6 +46,7 @@
     </header>
     <main>
         <!-- banner -->
+        <div class="w-full h-20 bg-brand-green"></div>
         <section class="bg-[url('pic/bg2.png')] bg-[size:100vw_100%] bg-no-repeat pb-28 md:hidden">
             <div class="flex justify-around items-start -mb-20 ">
                 <p class="text-2xl" style="writing-mode: vertical-lr;">告別植物殺手稱號</p>
@@ -56,7 +58,7 @@
         </section>
         <!-- @md -->
         <section class="bg-[url('pic/bg2.png')] bg-[size:100vw_100%] bg-no-repeat pb-28 hidden md:flex justify-center items-center h-[700px] relative">
-            <div class="absolute top-0 left-56" id="loader"></div>
+            <div class="absolute top-0 left-56 z-50" id="loader"></div>
             <div class="flex basis-2/6 justify-around">
                 <p class="text-2xl" style="writing-mode: vertical-lr;">告別植物殺手稱號</p>
                 <p class="text-4xl pt-6" style="writing-mode: vertical-lr;">你的植物從此綠意盎然</p>

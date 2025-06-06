@@ -12,6 +12,9 @@
     <title>我的植物</title>
 </head>
 <body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] ">
+    <button id="scrollTopBtn" title="回到頂部" class="scrolltopcss">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <header class="headercss">
         <a href="index.html"><img src="pic/logo.png" alt="" class="w-20"></a>
         <button id="menuButton" class="text-gray-700 focus:outline-none md:hidden">
@@ -27,12 +30,10 @@
                 <li><a href="#">關於我們</a></li>
             </ul>
         </nav>
-        <nav id="mobileMenu" class="hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6 z-50 transform transition-transform duration-300 ease-in-out translate-x-full">
+        <nav id="mobileMenu" class="mbmenucss">
             <div class="flex justify-end mb-4">
                 <button id="closeMenuButton" class="text-gray-700 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <i class="fa-solid fa-xmark text-white text-2xl"></i>
                 </button>
             </div>
             <ul class="space-y-4">
@@ -44,6 +45,7 @@
         </nav>
     </header>
     <main class="overflow-hidden relative">
+        <div class="w-full h-20 bg-brand-green"></div>
         <div class="h-44 bg-[url('pic/myplant/banner.jpg')] bg-cover bg-center mb-10 overflow-hidden md:h-56">
         </div>
         <img src="pic/myplant/shower.png" alt="" class="absolute w-44 -right-10 top-[200px] -rotate-45 hidden md:block">
