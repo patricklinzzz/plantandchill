@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="animation.css">
     <title>我的植物</title>
 </head>
-<body class="bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] ">
+<body class="bodycss">
     <button id="scrollTopBtn" title="回到頂部" class="scrolltopcss">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -23,12 +23,23 @@
             </svg>
         </button>
         <nav class="hidden md:flex">
-            <ul class="flex justify-end gap-8 px-4 rounded-3xl bg-brand-text py-2 *:text-white *:block *:text-lg navhover">
-                <li><a href="illustration.html">植物圖鑑</a></li>
-                <li class="border-b-2"><a href="myplant.html">我的植物</a></li>
-                <li><a href="#">聯繫我們</a></li>
-                <li><a href="#">關於我們</a></li>
-            </ul>
+            <ul class="flex justify-end gap-8 px-4 rounded-3xl bg-brand-text  *:text-white *:block *:text-lg *:py-2 navhover overflow-hidden">
+                <a href="illustration.html" class="before:content-['植物圖鑑']  navani ">
+                    <li>植物圖鑑</li>
+                </a>
+                <a href="myplant.html" class="before:content-['我的植物']  navani">
+                    <li class="border-b-2">我的植物</li>
+                </a>                    
+                <a href="#" class="before:content-['聯繫我們']  navani">
+                    <li>聯繫我們</li>
+                </a>
+                <a href="#" class="before:content-['關於我們']  navani">
+                    <li>關於我們</li>
+                </a>
+                <a href="login.html" class="before:content-['\f2bd'] before:font-fa-solid before:font-black  navani">
+                    <li><i class="fa-solid fa-circle-user"></i></li>
+                </a>
+            </ul>  
         </nav>
         <nav id="mobileMenu" class="mbmenucss">
             <div class="flex justify-end mb-4">
@@ -41,6 +52,7 @@
                 <li><a href="myplant.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">我的植物</a></li>
                 <li><a href="#" class="block text-gray-700 hover:text-green-600 text-lg py-2">聯繫我們</a></li>
                 <li><a href="#" class="block text-gray-700 hover:text-green-600 text-lg py-2">關於我們</a></li>
+                <li><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
             </ul>
         </nav>
     </header>

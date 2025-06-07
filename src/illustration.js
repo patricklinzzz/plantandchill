@@ -71,11 +71,13 @@ let closewin = document.getElementById('close')
 let plant_window = document.getElementById('plant_window')
 let Catharathus = document.getElementById('Catharathus')
 let mask = document.getElementById('mask')
+const header = document.querySelector('header')
 
 let body = document.body
 let scrollY = 0
 
 Catharathus.onclick = function () {
+    header.style.display='none'
     plant_window.style.display='block'
     scrollY = window.scrollY
     mask.style.position='fixed'
@@ -86,12 +88,14 @@ Catharathus.onclick = function () {
     body.style.width = '100%'
 }
 mask.onclick = function () {
+    header.style.display='flex'
     plant_window.style.display='none'
     body.style.position = ''
     window.scrollTo(0, scrollY)
     mask.style.display='none'
 }
 closewin.onclick = function () {
+    header.style.display='flex'
     plant_window.style.display='none'
     body.style.position = ''
     window.scrollTo(0, scrollY)

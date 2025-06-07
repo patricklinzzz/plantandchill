@@ -6,11 +6,17 @@
     @apply w-full h-20 top-0 z-50 px-4 flex justify-between items-center fixed transition duration-500; 
 }
 .footercss {
-    @apply bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8;
+    @apply bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8 w-full;
 }
 .mbmenucss {
     @apply hidden fixed top-0 right-0 h-dvh w-64 bg-brand-darkgreen opacity-90 shadow-lg p-6 z-50 transform transition-transform duration-300 ease-in-out translate-x-full [&_a]:text-white [&_li]:border-b-2;
 }
 .scrolltopcss {
     @apply fixed bottom-0 right-0 z-50 w-20 h-20 opacity-30 transition-opacity hover:opacity-100 hidden *:text-2xl;
+}
+.navani {
+    @apply before:left-0 before:top-full before:absolute relative before:text-green-600 before:py-2 before:font-bold
+}
+.bodycss {
+    @apply bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] *:text-brand-text flex flex-col justify-between [&>main]:flex-grow min-h-dvh
 }

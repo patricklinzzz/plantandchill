@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        'fa-solid': ['"Font Awesome 6 Free"'],
+      },
       colors: {
         'brand-text': '#4D4012',
         'brand-pink': '#E8BEA4',
