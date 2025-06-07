@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .headercss {
-    @apply w-dvw h-20 top-0 z-50 px-4 flex justify-between items-center fixed transition duration-500; 
+    @apply w-full h-20 top-0 z-50 px-4 flex justify-between items-center fixed transition duration-500; 
 }
 .footercss {
     @apply bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8 w-full;
@@ -18,5 +18,5 @@
     @apply before:left-0 before:top-full before:absolute relative before:text-green-600 before:py-2 before:font-bold
 }
 .bodycss {
-    @apply bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] *:text-brand-text flex flex-col justify-between [&>main]:flex-grow min-h-dvh w-dvw
+    @apply bg-[size:auto_100%] bg-[url('pic/bg.png')] bg-fixed md:bg-[size:100%_auto] *:text-brand-text flex flex-col justify-between [&>main]:flex-grow min-h-dvh w-full
 }
