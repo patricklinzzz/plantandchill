@@ -799,8 +799,8 @@ video {
   height: 100%;
 }
 
-.max-h-\[90vh\] {
-  max-height: 90vh;
+.max-h-\[90dvh\] {
+  max-height: 90dvh;
 }
 
 .w-1\/12 {
@@ -890,6 +890,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
+}
+
+.w-\[0vw\] {
+  width: 0vw;
+}
+
+.w-\[85vw\] {
+  width: 85vw;
 }
 
 .max-w-\[360px\] {
