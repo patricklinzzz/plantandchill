@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha 1 512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpol 2 icy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kosugi+Maru&family=LXGW+WenKai+TC&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animation.css">
+    <title>我的植物</title>
+</head>
+<body class="bodycss">
+    <button id="scrollTopBtn" title="回到頂部" class="scrolltopcss">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <header class="headercss">
+        <a href="index.html"><img src="pic/logo.png" alt="" class="w-20"></a>
+        <button id="menuButton" class="text-gray-700  md:hidden text-3xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="hidden md:flex">
+            <ul class="flex justify-end gap-8 px-4 rounded-3xl bg-brand-text  *:text-white *:block *:text-lg *:py-2 navhover overflow-hidden">
+                <a href="illustration.html" class="before:content-['植物圖鑑']  navani ">
+                    <li>植物圖鑑</li>
+                </a>
+                <a href="myplant.html" class="before:content-['我的植物']  navani">
+                    <li class="border-b-2">我的植物</li>
+                </a>                    
+                <a href="contact.html" class="before:content-['聯繫我們']  navani">
+                    <li>聯繫我們</li>
+                </a>
+                <a href="aboutus.html" class="before:content-['關於我們']  navani">
+                    <li>關於我們</li>
+                </a>
+                <a href="login.html" class="before:content-['\f2bd'] before:font-fa-solid before:font-black  navani">
+                    <li><i class="fa-solid fa-circle-user"></i></li>
+                </a>
+            </ul>  
+        </nav>
+        <nav id="mobileMenu" class="mbmenucss">
+            <div class="flex justify-end mb-4">
+                <button id="closeMenuButton" class="text-gray-700 focus:outline-none">
+                    <i class="fa-solid fa-xmark text-white text-2xl"></i>
+                </button>
+            </div>
+            <ul class="space-y-4">
+                <li><a href="illustration.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">植物圖鑑</a></li>
+                <li><a href="myplant.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">我的植物</a></li>
+                <li><a href="contact.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">聯繫我們</a></li>
+                <li><a href="aboutus.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">關於我們</a></li>
+                <li><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="w-full h-20 bg-brand-green"></div>
+        <section class="flex flex-col items-start mt-12 p-4 bg-brand-darkgreen2 rounded-2xl gap-4 [&_h2]:font-bold [&_h2]:text-xl md:w-8/12 mx-auto">
+            <h1 class="text-3xl font-bold self-center">新增盆栽</h1>
+            <div class="flex justify-start w-full">
+                <input type="file" id="file-uploader" accept="image/*" style="display:none;">
+                <label for="file-uploader" id="upload-label" class="relative cursor-pointer">
+                    <div class=" bg-brand-lightgreen w-20 h-20 rounded-2xl flex justify-center items-center font-bold text-2xl md:w-40 md:h-40">
+                        +
+                    </div>
+                    <div id="image-preview" class="absolute top-0 w-20 h-20 *:max-w-full overflow-hidden"></div>
+                </label>
+                <div class="flex flex-col justify-end gap-4 px-4">
+                    <label for="myplant_name">盆栽名稱</label>
+                    <input type="text" name="myplant_name" id="myplant_name" class="rounded-md py-1 px-2 w-full bg-brand-lightgreen">
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="bg-brand-lightgreen rounded-xl mb-5 overflow-hidden shadow-sm p-4 [&>div>span]:my-2">
+                    <h2>盆栽</h2>
+
+                    <div class="settings-item flex justify-between items-center border-b border-stone-200 cursor-pointer transition-colors active:bg-stone-200 last:border-b-0" data-options="陶土盆栽,塑膠盆栽,混凝土盆栽,金屬盆栽,石製盆栽,木製盆栽">
+                        <span class="text-gray-800">類型</span>
+                        <div class="flex items-center">
+                            <span class="item-value text-gray-500 mr-2"></span>
+                            <span class="text-gray-400"><i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="settings-item flex justify-between items-center  border-b border-stone-200 cursor-pointer transition-colors active:bg-stone-200 last:border-b-0" data-options="有孔排水,無孔排水">
+                        <span class="text-gray-800">排水</span>
+                        <div class="flex items-center">
+                            <span class="item-value text-gray-500 mr-2"></span>
+                            <span class="text-gray-400"><i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-lightgreen rounded-xl mb-5 overflow-hidden shadow-sm p-4 [&>div>span]:my-2">
+                    <h2>養護地點</h2>
+
+                    <div class="settings-item flex justify-between items-center border-b border-stone-200 cursor-pointer transition-colors active:bg-stone-200 last:border-b-0" data-options="臺北市,新北市,桃園市,臺中市,臺南市,高雄市,基隆市,新竹市,嘉義市,宜蘭縣,新竹縣,苗栗縣,彰化縣,南投縣,雲林縣,嘉義縣,屏東縣,花蓮縣,臺東縣,澎湖縣,金門縣,連江縣">
+                        <span class="text-gray-800">城市</span>
+                        <div class="flex items-center">
+                            <span class="item-value text-gray-500 mr-2"></span>
+                            <span class="text-gray-400"><i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="settings-item flex justify-between items-center  border-b border-stone-200 cursor-pointer transition-colors active:bg-stone-200 last:border-b-0" data-options="室內,室外">
+                        <span class="text-gray-800">放置</span>
+                        <div class="flex items-center">
+                            <span class="item-value text-gray-500 mr-2"></span>
+                            <span class="text-gray-400"><i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="settings-item flex justify-between items-center  border-b border-stone-200 cursor-pointer transition-colors active:bg-stone-200 last:border-b-0" data-options="黑暗,完全遮陰,部分日照,完全日照,植物燈">
+                        <span class="text-gray-800">光照</span>
+                        <div class="flex items-center">
+                            <span class="item-value text-gray-500 mr-2"></span>
+                            <span class="text-gray-400"><i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="picker-overlay" class="fixed inset-0 bg-black/50 opacity-0 invisible transition-opacity duration-300 z-40"></div>
+                <div id="picker-container" class="fixed bottom-0 left-1/2 w-full bg-gray-100 rounded-t-2xl transform translate-y-full transition-transform duration-300 ease-out z-50 pb-6 md:w-8/12 -translate-x-1/2">
+                    <ul id="picker-options" class="list-none p-0 m-0 max-h-[40vh] overflow-y-auto">
+                    </ul>
+                    <div id="picker-cancel" class="py-2 text-center text-lg font-bold text-white bg-gray-500 mt-2 cursor-pointer active:bg-gray-200">取消</div>
+                </div>
+            </div>
+            <button class="bg-brand-darkgreen text-white w-40 py-1 rounded-full m-auto " onclick="alert('儲存功能還沒做');return false">儲存</button>
+        </section>
+    </main>
+    <footer class="footercss">
+        <p class="text-sm">&copy;2025 Plant&Chill. All Rights Reserved.</p>
+        <img src="pic/logo.png" alt="" class="hidden md:block w-36 my-4">
+        <div class="[&_p]:text-xs  flex flex-col items-start md:[&_p]:text-lg w-fit">
+            <a href="" onclick="alert('沒有FB');return false"><p><i class="fa-brands fa-facebook"></i> Facebook</p></a>
+            <a href="" onclick="alert('沒有IG');return false"><p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
+            <a href="" onclick="alert('沒有EMAIL');return false"><p><i class="fa-solid fa-envelope"></i> Plantandchill@gmail.com</p></a>
+        </div>
+    </footer>
+    <script src="hamburger.js"></script>
+    <script src="add_plant.js"></script>
+</body>
+</html>

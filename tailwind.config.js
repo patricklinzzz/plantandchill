@@ -12,6 +12,7 @@ module.exports = {
         'brand-green': '#DCDEA5',
         'brand-lightgreen': '#EDEED7',
         'brand-darkgreen': '#184C34',
+        'brand-darkgreen2': '#BAD399',
       },
     },
   },
