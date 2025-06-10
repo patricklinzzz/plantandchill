@@ -70,7 +70,7 @@
                 <a href="add_plant.html"><button class="text-xl px-4 py-2 bg-brand-darkgreen text-white rounded-full">新增盆栽</button></a>
             </div>
             <div class="flex flex-wrap [&>div]:w-[150px] justify-start md:[&>div]:w-[250px] [&>div>div>img]:w-full [&>div>div]:w-full [&>div>img]:translate-y-6 hover:[&>div>img]:translate-y-0 [&>div>img]:transition-transform [&>div>img]:duration-700 [&>div>img]:cursor-pointer">
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center" onclick="openMyplant()">
                     <img src="pic/myplant/1.png" alt="">
                     <div class="relative">
                         <img src="pic/myplant/shelf.png" alt="">
@@ -137,7 +137,7 @@
             </div>
             <div id="plant_window" class="hidden">
                 <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 p-10 flex flex-col items-start gap-4 border-b border-l border-white/[.4] bg-gradient-to-tr from-[#e7e7e5b5] to-[#d0d2cfd2] shadow-lg backdrop-blur-md rounded-2xl w-[90vw] md:w-[50vw] max-h-[90dvh]" >
-                    <button class="absolute right-1 top-1 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" id="close"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="close absolute right-1 top-1 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" ><i class="fa-solid fa-xmark"></i></button>
                     <div class="w-full h-32 overflow-hidden flex justify-center items-center rounded-2xl">
                         <img src="pic/illustration/1.png" alt="" class="w-full">
                     </div>
@@ -167,6 +167,58 @@
                     </div>
                 </div>
             </div>
+            <div id="myplant_window" class="">
+                <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-start gap-4  bg-brand-darkgreen2 shadow-lg backdrop-blur-md rounded-2xl w-[90vw] md:w-[50vw] max-h-[90dvh] overflow-y-auto" >
+                    <button class="close absolute right-1 top-1 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" ><i class="fa-solid fa-xmark"></i></button>
+                    <div class="w-full flex-1 overflow-y-auto">
+                        <div class="w-full flex flex-col items-center">
+                            <img src="pic/myplant/1.png" alt="" class="w-1/3">
+                            <div class="self-start font-bold mx-10">
+                                <p>鹿角蕨</p>
+                                <p>2025/6/10</p>
+                            </div>
+                            <div class="bg-white w-full px-10 py-2">
+                                <nav class="flex justify-around font-bold border-b *:py-4">
+                                    <button>備註</button>
+                                    <button>植物護理</button>
+                                    <button>植栽資訊</button>
+                                </nav>
+                                <div>
+                                    <!-- 備註 -->
+                                    <div class="w-full my-4 hidden" >
+                                        <p>2025/6/10 植物新增成功</p>
+                                        <div class="flex justify-between gap-8 mt-32">
+                                            <input type="text" placeholder="紀錄你的植物" class="border rounded-lg bg-brand-lightgreen placeholder:text-gray-500 px-2 w-full"/>
+                                            <button class="text-white bg-brand-darkgreen px-4 rounded-full flex justify-center items-center"><i class="fa-solid fa-paper-plane"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- 植物護理 -->
+                                    <div class="w-full my-4 hidden" >
+                                        <p>護理日程</p>
+                                        <div class="flex flex-col *:py-2 divide-y divide-gray-200 *:flex *:justify-between px-8">
+                                            <div>
+                                                <p>澆水</p>
+                                                <input type="checkbox" name="" id="watering_chk" class="peer hidden">
+                                                <label for="watering_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
+                                            </div>
+                                            <div>
+                                                <p>施肥</p>
+                                                <input type="checkbox" name="" id="fertilize_chk" class="peer hidden">
+                                                <label for="fertilize_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 植栽資訊 -->
+                                    <div class="w-full my-4" >
+                                        <p>植栽資訊</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <div class="w-full h-full bg-gray-500 opacity-50 hidden top-0 z-10" id="mask"></div>
@@ -180,6 +232,6 @@
         </div>
     </footer>
     <script src="hamburger.js"></script>
-    <script src="illustration.js"></script>
+    <script src="myplant.js"></script>
 </body>
 </html>
