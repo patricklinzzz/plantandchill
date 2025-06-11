@@ -118,3 +118,58 @@ function openMyplant(){
     body.style.overflowY = 'scroll'
     body.style.width = '100%'
 }
+
+const myplantbtn = document.querySelectorAll('.myplantbtn')
+const myplantdiv = document.querySelectorAll('.myplantdiv')
+myplantbtn.forEach( btn =>{
+    btn.onclick=function(){
+        myplantbtn.forEach(button => {
+            button.classList.remove('text-black')
+            button.classList.add('text-gray-200')
+        })
+        btn.classList.add('text-black')
+        btn.classList.remove('text-gray-200')
+        for(i=0;i<myplantbtn.length;i++){
+            if(myplantbtn[i].classList.contains('text-black')){
+                myplantdiv[i].style.display='block'
+            }else{
+                myplantdiv[i].style.display='none'
+            }
+        }
+    }
+})
+
+//發送訊息
+document.addEventListener('DOMContentLoaded', () => {
+    const addButton = document.getElementById('add-record-btn');
+    const inputField = document.getElementById('record-input');
+    const recordsContainer = document.getElementById('records-container');
+
+    addButton.addEventListener('click', () => {
+        const newText = inputField.value.trim();
+
+        if (newText === '') {
+            return;
+        }
+
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
+        
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = `${year}/${month}/${day} ${newText}`;
+        newParagraph.className = 'mt-2'; 
+        
+        recordsContainer.appendChild(newParagraph);
+        inputField.value = '';
+        inputField.focus();
+    });
+
+    inputField.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addButton.click();
+        }
+    });
+
+});

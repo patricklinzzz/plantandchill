@@ -9,7 +9,7 @@
     @apply bg-[url('pic/footer.png')] bg-[size:100vw_100%] bg-no-repeat flex items-end justify-around mt-24 py-8 w-full;
 }
 .mbmenucss {
-    @apply hidden fixed top-0 right-0 h-dvh w-64 bg-brand-darkgreen opacity-90 shadow-lg p-6 z-50 transform transition-transform duration-300 ease-in-out translate-x-full [&_a]:text-white [&_li]:border-b-2;
+    @apply hidden fixed top-0 right-0 h-dvh w-full bg-brand-darkgreen opacity-90 shadow-lg p-6 z-50 transform transition-transform duration-300 ease-in-out translate-x-full [&_a]:text-white [&_li]:border-b-2 ;
 }
 .scrolltopcss {
     @apply fixed bottom-0 right-0 z-50 w-20 h-20 opacity-30 transition-opacity hover:opacity-100 hidden *:text-2xl;

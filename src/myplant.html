@@ -50,7 +50,7 @@
                 <li><a href="myplant.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">我的植物</a></li>
                 <li><a href="contact.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">聯繫我們</a></li>
                 <li><a href="aboutus.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">關於我們</a></li>
-                <li><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
+                <li class="absolute top-0 left-6 border-none"><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -116,33 +116,33 @@
                 <button id="carnivorous_btn">食蟲植物</button>
                 <button id="succulent_btn">多肉植物</button>
             </div>
-            <div class="flex flex-wrap justify-start  [&_img]:rounded-3xl gap-4 [&>div]:w-[calc(200px-8px)] [&_div]:h-full parent-container *:cursor-pointer p-5">
+            <div class="flex flex-wrap justify-start  [&_img]:rounded-3xl gap-4 [&>div]:w-[calc(200px-8px)] [&_div]:h-full parent-container *:cursor-pointer p-5 [&_span]:italic">
                 <div class="medicinal" id="Catharathus">
-                    <img src="pic/illustration/1.png" alt="">
-                    <p>日日春 <br> Catharathus roseus</p>
+                    <img src="pic/illustration/1.jpg" alt="">
+                    <p>日日春 <br> <span>Catharathus roseus</span></p>
                 </div>
                 <div class="medicinal">
-                    <img src="pic/illustration/2.png" alt="">
-                    <p>金絲桃 <br>Hypericum monogynum</p>
+                    <img src="pic/illustration/2.jpg" alt="">
+                    <p>金絲桃 <br><span>Hypericum monogynum</span></p>
                 </div>
                 <div class="carnivorous">
-                    <img src="pic/illustration/9.png" alt="">
-                    <p>豬籠草<br>Nepenthes spp.</p>
+                    <img src="pic/illustration/9.jpg" alt="">
+                    <p>豬籠草<br><span>Nepenthes spp</span></p>
                 </div>
 
                 <div class="medicinal">
-                    <img src="pic/illustration/3.png" alt="">
-                    <p>金銀花 <br>Lancer japonica</p>
+                    <img src="pic/illustration/3.jpg" alt="">
+                    <p>金銀花 <br><span>Lancer japonica</span></p>
                 </div>                
             </div>
             <div id="plant_window" class="hidden">
                 <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 p-10 flex flex-col items-start gap-4 border-b border-l border-white/[.4] bg-gradient-to-tr from-[#e7e7e5b5] to-[#d0d2cfd2] shadow-lg backdrop-blur-md rounded-2xl w-[90vw] md:w-[50vw] max-h-[90dvh]" >
                     <button class="close absolute right-1 top-1 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" ><i class="fa-solid fa-xmark"></i></button>
                     <div class="w-full h-32 overflow-hidden flex justify-center items-center rounded-2xl">
-                        <img src="pic/illustration/1.png" alt="" class="w-full">
+                        <img src="pic/illustration/1.jpg" alt="" class="w-full">
                     </div>
                     <div class="w-full flex items-center justify-between flex-wrap">
-                        <p class="text-3xl text-brand-text font-bold">日日春 <br>Catharathus roseus</p>
+                        <p class="text-3xl text-brand-text font-bold">日日春 <br><span class="italic">Catharathus roseus</span></p>
                         <button class="h-8 p-3 bg-pink-300 text-pink-800 rounded-full font-extrabold text-lg flex items-center justify-center hover:bg-gray-800 hover:text-white">
                             <i class="fa-solid fa-heart-circle-xmark text-nowrap">
                                 取消收藏
@@ -167,56 +167,120 @@
                     </div>
                 </div>
             </div>
-            <div id="myplant_window" class="">
-                <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-start gap-4  bg-brand-darkgreen2 shadow-lg backdrop-blur-md rounded-2xl w-[90vw] md:w-[50vw] max-h-[90dvh] overflow-y-auto" >
+            <div id="myplant_window" class="hidden">
+                <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-start bg-brand-darkgreen2 shadow-lg backdrop-blur-md rounded-2xl w-[90vw] md:w-[50vw] max-h-[90dvh] overflow-y-auto" >
                     <button class="close absolute right-1 top-1 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" ><i class="fa-solid fa-xmark"></i></button>
-                    <div class="w-full flex-1 overflow-y-auto">
+                    <div class="w-full">
                         <div class="w-full flex flex-col items-center">
                             <img src="pic/myplant/1.png" alt="" class="w-1/3">
-                            <div class="self-start font-bold mx-10">
-                                <p>鹿角蕨</p>
-                                <p>2025/6/10</p>
+                            <div class="self-start font-bold mx-10 -mt-10">
+                                <p class="text-xl">鹿角蕨</p>
+                                <p>建立日期:2025/6/10</p>
                             </div>
                             <div class="bg-white w-full px-10 py-2">
-                                <nav class="flex justify-around font-bold border-b *:py-4">
-                                    <button>備註</button>
-                                    <button>植物護理</button>
-                                    <button>植栽資訊</button>
+                                <nav class="flex justify-around font-bold *:py-2 ">
+                                    <button class="myplantbtn text-gray-200">備註</button>
+                                    <button class="myplantbtn text-black">植物護理</button>
+                                    <button class="myplantbtn text-gray-200">植栽資訊</button>
                                 </nav>
-                                <div>
-                                    <!-- 備註 -->
-                                    <div class="w-full my-4 hidden" >
-                                        <p>2025/6/10 植物新增成功</p>
-                                        <div class="flex justify-between gap-8 mt-32">
-                                            <input type="text" placeholder="紀錄你的植物" class="border rounded-lg bg-brand-lightgreen placeholder:text-gray-500 px-2 w-full"/>
-                                            <button class="text-white bg-brand-darkgreen px-4 rounded-full flex justify-center items-center"><i class="fa-solid fa-paper-plane"></i></button>
-                                        </div>
-                                    </div>
-                                    <!-- 植物護理 -->
-                                    <div class="w-full my-4 hidden" >
-                                        <p>護理日程</p>
-                                        <div class="flex flex-col *:py-2 divide-y divide-gray-200 *:flex *:justify-between px-8">
-                                            <div>
-                                                <p>澆水</p>
-                                                <input type="checkbox" name="" id="watering_chk" class="peer hidden">
-                                                <label for="watering_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
-                                            </div>
-                                            <div>
-                                                <p>施肥</p>
-                                                <input type="checkbox" name="" id="fertilize_chk" class="peer hidden">
-                                                <label for="fertilize_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 植栽資訊 -->
-                                    <div class="w-full my-4" >
-                                        <p>植栽資訊</p>
-
-                                    </div>
-                                </div>
                             </div>
                         </div> 
                     </div>
+                    <div class="w-full flex-1 overflow-y-auto bg-white px-10">
+                        <!-- 備註 -->
+                        <div class="w-full my-4 hidden myplantdiv" >
+                            <div id="records-container">
+                                <p>2025/6/10 植物新增成功</p>
+                            </div>
+                            <div class="flex justify-between gap-8 mt-32">
+                                <input type="text" placeholder="紀錄你的植物" class="border rounded-lg bg-brand-lightgreen placeholder:text-gray-500 p-2 w-full" id="record-input"/>
+                                <button class="text-white bg-brand-darkgreen px-4 rounded-full flex justify-center items-center" id="add-record-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                        <!-- 植物護理 -->
+                        <div class="w-full my-4 myplantdiv " >
+                            <p>護理日程</p>
+                            <div class="flex flex-col [&>div>div]:py-2 divide-y divide-gray-200 [&>div>div]:flex [&>div>div]:justify-between px-8">
+                                <div>
+                                    <div>
+                                        <p>澆水</p>
+                                        <input type="checkbox" name="" id="watering_chk" class="peer hidden">
+                                        <label for="watering_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
+                                    </div>
+                                    <div class="pl-6">
+                                        <label for="alarm-time">設定提醒時間：</label>
+                                        <input type="time" id="alarm-time" name="alarm-time">
+                                    </div>
+                                    <div class="pl-6">
+                                        <label for="alarm-day">設定間隔天數：</label>
+                                        <div>
+                                            <p><input type="number" id="alarm-day" name="alarm-day" class="w-12 border pl-2 self-end">
+                                            天</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div>   
+                                    <div>
+                                        <p>施肥</p>
+                                        <input type="checkbox" name="" id="fertilize_chk" class="peer hidden">
+                                        <label for="fertilize_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
+                                    </div>
+                                    <div class="pl-6">
+                                        <label for="alarm-time">設定提醒時間：</label>
+                                        <input type="time" id="alarm-time" name="alarm-time">
+                                    </div>
+                                    <div class="pl-6">
+                                        <label for="alarm-day">設定間隔天數：</label>
+                                        <div>
+                                            <p><input type="number" id="alarm-day" name="alarm-day" class="w-12 border pl-2 self-end">
+                                            天</p>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- 植栽資訊 -->
+                        <div class="w-full my-4 hidden myplantdiv">
+                            <p>普通鹿角蕨</p>
+                            <p class="italic text-sm">Platycerium bifurcatum</p>
+                            <table class="[&_td]:border-r-0 bg-brand-lightgreen [&_td]:border-black rounded-xl  [&_td]:p-2 my-4">
+                                <thead class="[&_td:nth-child(1)]:w-1/4 [&_td:nth-child(1)]:border-r [&_tr]:border-b [&_tr]:border-black">
+                                    <tr class="text-center font-bold">
+                                        <td>栽培要點</td>
+                                        <td>詳細說明</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="[&_td:nth-child(1)]:text-center [&_td:nth-child(1)]:border-r [&_tr]:border-b [&_tr]:border-black last:[&_tr]:border-b-0">
+                                    <tr>
+                                        <td>光照</td>
+                                        <td>喜歡明亮的散射光，應避免強烈陽光直射，以免葉片灼傷。葉片顏色偏淺、絨毛較多者，通常需要較強的光線；葉片寬大、深綠者，則較耐陰。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>水分</td>
+                                        <td>澆水原則為「介質乾透再澆透」。可以觀察水苔的顏色或用手觸摸感受其濕度。澆水時要確保整個水苔球都濕潤。此外，鹿角蕨可透過葉片上的絨毛吸收空氣中的水分，因此維持環境濕度（建議50%以上）非常重要，可定期在植株周圍噴霧。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>介質與上板</td>
+                                        <td>鹿角蕨為附生植物，根系需要良好的透氣性。最常見的栽培方式是「上板」，即將植株以濕潤的水苔包覆根部，再用線固定於木板、樹皮或蛇木板上。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>通風</td>
+                                        <td>良好的空氣流通是預防病蟲害及根部腐爛的關鍵。應將鹿角蕨放置於通風處，避免悶熱潮濕的環境。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>溫度</td>
+                                        <td>大多數鹿角蕨喜歡溫暖的環境，生長適溫約在攝氏18至30度之間。冬季需注意保暖，避免寒害。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>施肥</td>
+                                        <td>生長季節（春、夏季）可每隔2-4週施用稀釋的液態肥，或在水苔中放置緩效性肥料。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

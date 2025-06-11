@@ -50,7 +50,7 @@
                 <li><a href="myplant.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">我的植物</a></li>
                 <li><a href="contact.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">聯繫我們</a></li>
                 <li><a href="aboutus.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">關於我們</a></li>
-                <li><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
+                <li class="absolute top-0 left-6 border-none"><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -72,64 +72,64 @@
                 <button id="carnivorous_btn">食蟲植物</button>
                 <button id="succulent_btn">多肉植物</button>
             </div>
-            <div class="flex flex-wrap justify-start  [&_img]:rounded-3xl gap-4 [&>div]:w-[calc(200px-8px)] [&_div]:h-full parent-container *:cursor-pointer ">
+            <div class="flex flex-wrap justify-start  [&_img]:rounded-3xl gap-4 [&>div]:w-[calc(200px-8px)] [&_div]:h-full parent-container *:cursor-pointer [&_h6]:italic">
                 <div class="medicinal" id="Catharathus">
-                    <img src="pic/illustration/1.png" alt="">
-                    <p>日日春 <br> Catharathus roseus</p>
+                    <img src="pic/illustration/1.jpg" alt="">
+                    <p>日日春 <br> <h6>Catharathus roseus</h6></p>
                 </div>
                 <div class="medicinal">
-                    <img src="pic/illustration/2.png" alt="">
-                    <p>金絲桃 <br>Hypericum monogynum</p>
+                    <img src="pic/illustration/2.jpg" alt="">
+                    <p>金絲桃 <br><h6>Hypericum monogynum</h6></p>
                 </div>
                 <div class="medicinal">
-                    <img src="pic/illustration/3.png" alt="">
-                    <p>金銀花 <br>Lancer japonica</p>
+                    <img src="pic/illustration/3.jpg" alt="">
+                    <p>金銀花 <br><h6>Lancer japonica</h6></p>
                 </div>
                 <div class="medicinal">
-                    <img src="pic/illustration/4.png" alt="">
-                    <p>洛神葵 <br>Hibiscus sabdariffa.</p>
+                    <img src="pic/illustration/4.jpg" alt="">
+                    <p>洛神葵 <br><h6>Hibiscus sabdariffa.</h6></p>
                 </div>
                 <div class="succulent">
-                    <img src="pic/illustration/5.png" alt="">
-                    <p>火龍果 <br>Hylocereus undatus</p>
+                    <img src="pic/illustration/5.jpg" alt="">
+                    <p>火龍果 <br><h6>Hylocereus undatus</h6></p>
                 </div>
                 <div class="succulent">
-                    <img src="pic/illustration/6.png" alt="">
-                    <p>石蓮花 <br>Graptopelaum Paraguayense</p>
+                    <img src="pic/illustration/6.jpg" alt="">
+                    <p>石蓮花 <br><h6>Graptopelaum Paraguayense</h6></p>
                 </div>
                 <div class="succulent">
-                    <img src="pic/illustration/7.png" alt="">
-                    <p>沙漠玫瑰 <br>Adeniuum obesum</p>
+                    <img src="pic/illustration/7.jpg" alt="">
+                    <p>沙漠玫瑰 <br><h6>Adeniuum obesum</h6></p>
                 </div>
                 <div class="succulent">
-                    <img src="pic/illustration/8.png" alt="">
-                    <p>松葉牡丹 <br>Portulaca grandiflora</p>
+                    <img src="pic/illustration/8.jpg" alt="">
+                    <p>松葉牡丹 <br><h6>Portulaca grandiflora</h6></p>
                 </div>
                 <div class="carnivorous">
-                    <img src="pic/illustration/9.png" alt="">
-                    <p>豬籠草<br>Nepenthes spp.</p>
+                    <img src="pic/illustration/9.jpg" alt="">
+                    <p>豬籠草<br><h6>Nepenthes spp.</h6></p>
                 </div>
                 <div class="carnivorous">
-                    <img src="pic/illustration/10.png" alt="">
-                    <p>尖尾鳳<br>Justicia gendarussa</p>
+                    <img src="pic/illustration/10.jpg" alt="">
+                    <p>尖尾鳳<br><h6>Justicia gendarussa</h6></p>
                 </div>
                 <div class="carnivorous">
-                    <img src="pic/illustration/11.png" alt="">
-                    <p>捕蠅草<br>Dionaea muscipula</p>
+                    <img src="pic/illustration/11.jpg" alt="">
+                    <p>捕蠅草<br><h6>Dionaea muscipula</h6></p>
                 </div>
                 <div class="carnivorous">
-                    <img src="pic/illustration/12.png" alt="">
-                    <p>小毛氈苔<br>Drosera spathulata</p>
+                    <img src="pic/illustration/12.jpg" alt="">
+                    <p>小毛氈苔<br><h6>Drosera spathulata</h6></p>
                 </div>
             </div>
             <div id="plant_window" class="hidden">
                 <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 p-10 flex flex-col items-start gap-4 border-b border-l border-white/[.4] bg-gradient-to-tr from-[#e7e7e5b5] to-[#d0d2cfd2] shadow-lg backdrop-blur-md rounded-2xl w-[90vw] md:w-[50vw] max-h-[90dvh]" >
                     <button class="close absolute right-1 top-1 w-10 h-10 bg-gray-500 rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" ><i class="fa-solid fa-xmark"></i></button>
                     <div class="w-full h-32 overflow-hidden flex justify-center items-center rounded-2xl">
-                        <img src="pic/illustration/1.png" alt="" class="w-full">
+                        <img src="pic/illustration/1.jpg" alt="" class="w-full">
                     </div>
                     <div class="w-full flex items-center justify-between flex-wrap">
-                        <p class="text-3xl text-brand-text font-bold">日日春 <br>Catharathus roseus</p>
+                        <p class="text-3xl text-brand-text font-bold">日日春 <br><span class="italic">Catharathus roseus</span></p>
                         <button class="h-8 p-3 bg-pink-300 text-pink-800 rounded-full font-extrabold text-lg flex items-center justify-center hover:bg-gray-800 hover:text-white">
                             <i class="fa-solid fa-heart text-nowrap">   
                                 收藏

@@ -50,21 +50,23 @@
                 <li><a href="myplant.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">我的植物</a></li>
                 <li><a href="contact.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">聯繫我們</a></li>
                 <li><a href="aboutus.html" class="block text-gray-700 hover:text-green-600 text-lg py-2">關於我們</a></li>
-                <li><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
+                <li class="absolute top-0 left-6 border-none"><a href="login.html" class="block text-gray-700 hover:text-green-600 text-lg py-2"><i class="fa-solid fa-circle-user"></i></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="w-full h-20 bg-brand-green"></div>
-        <section class="flex flex-col items-start mt-12 p-4 bg-brand-darkgreen2 rounded-2xl gap-4 [&_h2]:font-bold [&_h2]:text-xl md:w-8/12 mx-auto">
+
+        <section class="flex flex-col items-start mt-24 p-4 bg-brand-darkgreen2 rounded-2xl gap-4 [&_h2]:font-bold [&_h2]:text-xl md:w-8/12 mx-auto relative">
+            <button class="py-2 px-4 bg-brand-darkgreen text-white rounded-full absolute -top-16" onclick="history.back()"><i class="fa-solid fa-reply pr-4"></i>回到上一頁</button>            
             <h1 class="text-3xl font-bold self-center">新增盆栽</h1>
             <div class="flex justify-start w-full">
                 <input type="file" id="file-uploader" accept="image/*" style="display:none;">
-                <label for="file-uploader" id="upload-label" class="relative cursor-pointer">
+                <label for="file-uploader" id="upload-label" class="relative cursor-pointer ">
                     <div class=" bg-brand-lightgreen w-20 h-20 rounded-2xl flex justify-center items-center font-bold text-2xl md:w-40 md:h-40">
                         +
                     </div>
-                    <div id="image-preview" class="absolute top-0 w-20 h-20 *:max-w-full overflow-hidden"></div>
+                    <div id="image-preview" class="absolute top-0 w-20 h-20 *:max-w-full md:w-40 md:h-40 rounded-2xl overflow-hidden"></div>
                 </label>
                 <div class="flex flex-col justify-end gap-4 px-4">
                     <label for="myplant_name">盆栽名稱</label>

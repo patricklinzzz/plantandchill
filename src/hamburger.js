@@ -1,8 +1,11 @@
 const menuButton = document.getElementById('menuButton')
 const closeMenuButton = document.getElementById('closeMenuButton')
 const mobileMenu = document.getElementById('mobileMenu')
-
+let scrollY2 = 0
 menuButton.addEventListener('click', () => {
+    scrollY2 = window.scrollY
+    document.body.style.top = `-${window.scrollY}px`
+    document.body.style.position='fixed'
     mobileMenu.style.display='block'
     setTimeout(() => {
         mobileMenu.style.transform='translateX(0)'
@@ -10,18 +13,12 @@ menuButton.addEventListener('click', () => {
 })
 
 closeMenuButton.addEventListener('click', () => {
+    document.body.style.position=''
+    window.scrollTo(0,scrollY2)
     mobileMenu.style.transform='translateX(100%)'
     setTimeout(() => {
         mobileMenu.style.display='hidden'
     }, 200)
-})
-document.addEventListener('click', function(event) {
-    const isClickInsideMenu = mobileMenu.contains(event.target)
-    const isClickOnMenuButton = menuButton.contains(event.target)
-
-    if (!isClickInsideMenu && !isClickOnMenuButton && !mobileMenu.classList.contains('hidden')) {
-        closeMenuButton.click()
-    }
 })
 // 固定導覽列
 // 回到上方
