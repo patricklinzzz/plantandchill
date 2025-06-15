@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const threeDwindow = document.getElementById('canvas-container');
     const mask = document.getElementById('mask');
     const canvas = document.querySelector('#webgl-canvas');
+    const loadingIndicator = document.getElementById('loading-indicator');
 
     // 防錯：如果缺少任何一個關鍵元素，就不執行後續程式碼
     if (!btn3d || !close3d || !threeDwindow || !canvas) {
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * 初始化 Three.js 場景的函式 (只會在第一次點擊時執行一次)
      */
     function init() {
+        loadingIndicator.style.display = 'flex';
         // 取得容器的當前尺寸
         const sizes = {
             width: threeDwindow.clientWidth,
@@ -90,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const model = gltf.scene;
                 model.position.set(0, -1, 0);
                 scene.add(model);
+                
+                loadingIndicator.style.display = 'none';
             },
             undefined, // 載入進度，這裡省略
             (error) => console.error('模型載入失敗', error)
