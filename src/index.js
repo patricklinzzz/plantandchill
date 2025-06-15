@@ -28,3 +28,4 @@ window.addEventListener('scroll', function() {
         watering.style.transform='translateX(25%)'
     }
 });
+

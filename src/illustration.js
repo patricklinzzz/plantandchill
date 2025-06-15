@@ -103,3 +103,4 @@ closewin.forEach(function(button){
         mask.style.display='none'
     }
 })
+

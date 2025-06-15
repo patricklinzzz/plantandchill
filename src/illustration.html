@@ -130,6 +130,9 @@
                     </div>
                     <div class="w-full flex items-center justify-between flex-wrap">
                         <p class="text-3xl text-brand-text font-bold">日日春 <br><span class="italic">Catharathus roseus</span></p>
+                        <button id="btn3d" class="h-8 p-3 bg-blue-300 text-blue-800 rounded-full font-extrabold text-lg flex items-center justify-center hover:bg-gray-800 hover:text-white">
+                            <i class="fa-solid fa-cubes"> 3D圖</i>
+                        </button>
                         <button class="h-8 p-3 bg-pink-300 text-pink-800 rounded-full font-extrabold text-lg flex items-center justify-center hover:bg-gray-800 hover:text-white">
                             <i class="fa-solid fa-heart text-nowrap">   
                                 收藏
@@ -156,6 +159,10 @@
             </div>
         </section>
         <div class="w-full h-full bg-gray-500 opacity-50 hidden top-0 z-10" id="mask"></div>
+        <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full hidden z-30" id="canvas-container"> 
+            <canvas id="webgl-canvas" class="w-full h-full "></canvas>
+            <button class="absolute right-4 top-4 w-fit px-4 bg-white rounded-full font-extrabold text-2xl flex items-center justify-center hover:bg-gray-800 hover:text-white" id="close3d">關閉3D圖</button>
+        </div>
     </main>
     <footer class="footercss">
         <p class="text-sm">&copy;2025 Plant&Chill. All Rights Reserved.</p>
@@ -168,5 +175,14 @@
     </footer>
     <script src="hamburger.js"></script>
     <script src="illustration.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script src="3jsmod.js" type="module"></script>
 </body>
 </html>
