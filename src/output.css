@@ -706,6 +706,10 @@ video {
   z-index: 50;
 }
 
+.z-\[-1\] {
+  z-index: -1;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -908,6 +912,22 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-4\/5 {
+  height: 80%;
+}
+
+.h-\[4\/5\] {
+  height: 4/5;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-\[90dvh\] {
+  height: 90dvh;
 }
 
 .max-h-\[40vh\] {
@@ -2129,6 +2149,10 @@ video {
 
   .md\:h-56 {
     height: 14rem;
+  }
+
+  .md\:h-\[80vh\] {
+    height: 80vh;
   }
 
   .md\:w-1\/4 {

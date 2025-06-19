@@ -39,78 +39,67 @@ body {
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-    const notificationInput = document.getElementById('notificationInput');
-    const sendButton = document.getElementById('sendButton');
+        const notificationInput = document.getElementById('notificationInput');
+        const sendButton = document.getElementById('sendButton');
 
-    // 檢查瀏覽器是否支援 Notifications API
-    if (!("Notification" in window)) {
-        alert("你的瀏覽器不支援桌面通知功能。");
-        sendButton.disabled = true;
-        return;
-    }
-
-    // 請求通知權限
-    // 只有在使用者明確同意後，才能發送通知
-    function requestNotificationPermission() {
-        Notification.requestPermission().then(permission => {
-        if (permission === "granted") {
-            console.log("通知權限已獲取！");
-        } else {
-            console.warn("通知權限被拒絕。");
-            alert("你需要允許通知才能收到訊息。");
+        // 檢查瀏覽器是否支援 Notifications API
+        if (!("Notification" in window)) {
+            alert("你的瀏覽器不支援桌面通知功能。");
+            sendButton.disabled = true;
+            return;
         }
+
+        // 請求通知權限的函式 (只保留這一個)
+        function requestNotificationPermission() {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    console.log("通知權限已獲取！");
+                } else {
+                    console.warn("通知權限被拒絕。");
+                    // 第一次被拒絕時提醒使用者
+                    alert("你需要允許通知才能收到訊息。");
+                }
+            });
+        }
+
+        // 發送通知的函式
+        function sendNotification(message) {
+            // 在發送前再次確認權限狀態
+            if (Notification.permission === "granted") {
+                const notification = new Notification("新訊息！", {
+                    body: message
+                });
+
+                notification.onclick = function () {
+                    window.focus();
+                    this.close();
+                };
+            } else {
+                // 如果權限不是 'granted'，引導使用者去請求
+                alert("請先允許通知權限。");
+                requestNotificationPermission(); // 再次發起請求
+            }
+        }
+
+        // 按鈕點擊事件
+        sendButton.addEventListener('click', () => {
+            const message = notificationInput.value.trim();
+            if (message) {
+                // 【優化】將權限檢查和發送邏輯都放在點擊事件裡
+                // 如果權限已經是 granted，會直接發送
+                // 如果是 default，會先請求權限，使用者同意後需再點一次按鈕
+                // 如果是 denied，會提示使用者
+                if (Notification.permission === 'denied') {
+                    alert("通知權限先前已被拒絕，請到瀏覽器設定中手動開啟。");
+                    return;
+                }
+                sendNotification(message);
+                notificationInput.value = ""; // 清空輸入框
+            } else {
+                alert("請輸入通知訊息！");
+            }
         });
-    }
-
-    // 網頁載入時先請求一次權限 (或者你可以在使用者點擊按鈕時才請求)
-    requestNotificationPermission();
-
-    // 發送通知的函數
-    function sendNotification(message) {
-        if (Notification.permission === "granted") {
-        const notification = new Notification("新訊息！", {
-            body: message,
-            icon: 'https://via.placeholder.com/48' // 你可以換成自己的圖示 URL
-        });
-
-        // 可選：點擊通知時的行為
-        notification.onclick = function () {
-            window.focus(); // 將視窗帶到前景
-            this.close();    // 關閉通知
-        };
-
-        } else if (Notification.permission === "denied") {
-        alert("通知權限先前已被拒絕，請到瀏覽器設定中修改。");
-        } else {
-        // 如果權限是 "default" (使用者尚未選擇)，再次請求
-        requestNotificationPermission();
-        }
-    }
-
-    // 按鈕點擊事件
-    sendButton.addEventListener('click', () => {
-        const message = notificationInput.value.trim();
-        if (message) {
-        sendNotification(message);
-        notificationInput.value = ""; // 清空輸入框
-        } else {
-        alert("請輸入通知訊息！");
-        }
     });
-    });
-
-    function requestNotificationPermission() {
-  Notification.requestPermission().then(permission => {
-    console.log("手機上的權限請求結果:", permission); // 在遠端偵錯的 Console 中查看
-    if (permission === "granted") {
-      console.log("通知權限已獲取！");
-    } else {
-      console.warn("通知權限被拒絕或預設。");
-      // 即使之前設為允許，如果Chrome重設了，這裡可能會是 denied 或 default
-    }
-  });
-}
 </script>
-
 </body>
 </html>

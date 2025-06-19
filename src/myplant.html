@@ -60,7 +60,7 @@
         <div class="h-44 bg-[url('pic/myplant/banner.jpg')] bg-cover bg-center mb-10 overflow-hidden md:h-56">
         </div>
         <img src="pic/myplant/shower.png" alt="" class="absolute w-44 -right-10 top-[200px] -rotate-45 hidden md:block">
-        <div class="absolute w-20 right-24 top-[320px] hidden md:block">
+        <div class="absolute w-20 right-24 z-[-1] top-[320px] hidden md:block">
             <img src="pic/myplant/water1.png" alt="" class="w-12 animate-water-drop">
             <img src="pic/myplant/water2.png" alt="" class="animate-water-drop2 -translate-x-8">
             <img src="pic/myplant/water3.png" alt="" class="animate-water-drop3 -translate-x-8">
@@ -78,7 +78,7 @@
                         <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline font-bold bg-brand-lightgreen px-2 rounded-xl">鹿角蕨</p>
                     </div>
                     <p>下次澆水時間</p>
-                    <p>明天</p>
+                    <p id="next-watering" class="text-gray-400">尚未設定</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <img src="pic/myplant/2.png" alt="">
@@ -87,7 +87,7 @@
                         <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline font-bold bg-brand-lightgreen px-2 rounded-xl">仙人掌</p>
                     </div>
                     <p>下次澆水時間</p>
-                    <p>2週後</p>
+                    <p>14天後</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <img src="pic/myplant/3.png" alt="">
@@ -204,8 +204,8 @@
                             <div class="flex flex-col [&>div>div]:py-2 divide-y divide-gray-200 [&>div>div]:flex [&>div>div]:justify-between px-8">
                                 <div>
                                     <div>
-                                        <p>澆水</p>
-                                        <input type="checkbox" name="" id="watering_chk" class="peer hidden">
+                                        <p>澆水提醒通知</p>
+                                        <input  type="checkbox" name="" id="watering_chk" class="peer hidden">
                                         <label for="watering_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
                                     </div>
                                     <div class="pl-6">
@@ -215,25 +215,29 @@
                                     <div class="pl-6">
                                         <label for="alarm-day">設定間隔天數：</label>
                                         <div>
-                                            <p><input type="number" id="alarm-day" name="alarm-day" class="w-12 border pl-2 self-end">
+                                            <p><input type="number" id="alarm-day" name="alarm-day" min="0" class="w-12 border pl-2 self-end">
                                             天</p>
                                         </div>
+                                    </div>
+                                    <div class="pl-6">
+                                        <label for="pre-watering">上次澆水日期：</label>
+                                        <input type="date" id="pre-watering" name="pre-watering">
                                     </div>
                                 </div> 
                                 <div>   
                                     <div>
-                                        <p>施肥</p>
+                                        <p>施肥提醒通知</p>
                                         <input type="checkbox" name="" id="fertilize_chk" class="peer hidden">
                                         <label for="fertilize_chk" class="peer-checked:bg-green-500 peer-checked:before:translate-x-6 relative w-14 h-7 bg-gray-300 rounded-full shadow-inner cursor-pointer transition-colors before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-full before:left-1 before:w-5 before:h-5 before:transition-transform before:shadow before:bg-white"></label>
                                     </div>
                                     <div class="pl-6">
-                                        <label for="alarm-time">設定提醒時間：</label>
-                                        <input type="time" id="alarm-time" name="alarm-time">
+                                        <label for="fertilize-alarm-time">設定提醒時間：</label>
+                                        <input type="time" id="fertilize-alarm-time" name="fertilize-alarm-time">
                                     </div>
                                     <div class="pl-6">
-                                        <label for="alarm-day">設定間隔天數：</label>
+                                        <label for="fertilize-alarm-day">設定間隔天數：</label>
                                         <div>
-                                            <p><input type="number" id="alarm-day" name="alarm-day" class="w-12 border pl-2 self-end">
+                                            <p><input type="number" id="fertilize-alarm-day" name="fertilize-alarm-day" class="w-12 border pl-2 self-end">
                                             天</p>
                                         </div>
                                     </div>                                    
