@@ -183,17 +183,17 @@ function remainday() {
     let preWdate = new Date(preWatering.value)
     let alarmDayValue = alarmDay.value
     let remainDay = alarmDayValue - Math.floor((nowdate - preWdate) / (1000 * 60 * 60 * 24))
-    if (remainDay == 1) {
+    if (remainDay == 0) {
         nextWatering.innerText = '明天'
         nextWatering.style.color = '#4d4012'
-    } else if (remainDay == 2) {
+    } else if (remainDay == 1) {
         nextWatering.innerText = '後天'
         nextWatering.style.color = '#4d4012'
-    } else if (remainDay <= 0) {
+    } else if (remainDay < 0) {
         nextWatering.innerText = '今天'
         nextWatering.style.color = '#4d4012'
     } else {
-        nextWatering.innerText = remainDay + '天後'
+        nextWatering.innerText = remainDay+1 + '天後'
         nextWatering.style.color = '#4d4012'
     }
 }
@@ -225,7 +225,7 @@ settime.addEventListener('change', function () {
             let alarmDayValue = alarmDay.value
             let remainDay = alarmDayValue - Math.floor((nowdate - preWdate) / (1000 * 60 * 60 * 24))
             let currentTime = String(nowdate.getHours()).padStart(2, '0') + ':' + String(nowdate.getMinutes()).padStart(2, '0')
-            if (currentTime == timeinput && watering_chk.checked && remainDay <= 0) {
+            if (currentTime == timeinput && watering_chk.checked && remainDay < 0) {
                 new Notification('該澆花囉!')
                 clearInterval(alarmTimerId)
             }
