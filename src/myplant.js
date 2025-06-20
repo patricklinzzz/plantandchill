@@ -212,7 +212,7 @@ settime.addEventListener('change', function () {
             setAlarm(timeinput);
         } else {
             // 如果使用者拒絕，給予提示
-            alert('您已拒絕顯示通知。')
+            alert('您已拒絕顯示通知')
         }
     });
     function setAlarm(timeinput) {

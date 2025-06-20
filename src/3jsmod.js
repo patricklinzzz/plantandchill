@@ -2,10 +2,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-// 確保在 HTML 完全載入後才執行腳本，避免找不到元素
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. 獲取所有需要的 HTML 元素 ---
     const btn3d = document.getElementById('btn3d');
     const close3d = document.getElementById('close3d');
     const threeDwindow = document.getElementById('canvas-container');
@@ -13,13 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.querySelector('#webgl-canvas');
     const loadingIndicator = document.getElementById('loading-indicator');
 
-    // 防錯：如果缺少任何一個關鍵元素，就不執行後續程式碼
-    if (!btn3d || !close3d || !threeDwindow || !canvas) {
-        console.error('錯誤：找不到 3D 視窗所需的 HTML 元素。');
-        return;
-    }
 
-    // --- 2. 將 Three.js 的核心變數宣告在外部，讓它們可以被共用 ---
     let camera, scene, renderer, controls, animationId = null;
 
     /**
@@ -117,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 「打開」按鈕的點擊事件
     btn3d.addEventListener('click', () => {
-        // 顯示視窗和遮罩
         threeDwindow.style.display = 'block';
         if (mask) mask.style.zIndex = '21';
 
@@ -135,9 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 「關閉」按鈕的點擊事件
     close3d.addEventListener('click', () => {
-        // 隱藏視窗和遮罩
         threeDwindow.style.display = 'none';
         if (mask) mask.style.zIndex = '10';
 
