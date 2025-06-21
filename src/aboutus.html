@@ -64,7 +64,7 @@
         <section class="flex flex-col items-center px-4 m-auto gap-4 [&_h1]:text-2xl [&_h1]:font-bold [&_h2]:font-bold max-w-md md:max-w-[66.5%] md:[&_h1]:text-4xl md:[&_h2]:text-xl md:[&_p]:text-xl">
             <img src="pic/aboutus/1.jpg" alt="" class="w-1/2 rounded-2xl">
             <h1>我們的使命</h1>
-            <p>「我們相信，每一株綠意盎然的植物，都擁有療癒人心的力量。然而，在忙碌的現代生活中，我們常常忘記為身邊的綠色夥伴澆水，或是不確定該如何照顧它們。『Plant&Chill』的誕生，就是為了解決這個煩惱。我們的使命是利用簡單好用的工具，幫助您輕鬆成為一位稱職的綠手指，讓您與植物的關係，從此只有成長的喜悅，沒有枯萎的遺憾。」</p>
+            <p id="section1" class="transition duration-1000 opacity-50">「我們相信，每一株綠意盎然的植物，都擁有療癒人心的力量。然而，在忙碌的現代生活中，我們常常忘記為身邊的綠色夥伴澆水，或是不確定該如何照顧它們。『Plant&Chill』的誕生，就是為了解決這個煩惱。我們的使命是利用簡單好用的工具，幫助您輕鬆成為一位稱職的綠手指，讓您與植物的關係，從此只有成長的喜悅，沒有枯萎的遺憾。」</p>
             <div class="*:w-1/4 flex justify-between gap-2 my-16">
                 <img src="pic/aboutus/2.jpg" alt="">
                 <img src="pic/aboutus/3.jpg" alt="">
@@ -72,14 +72,14 @@
             </div>
             <h1>我們的理念與堅持</h1>
             <div class="flex flex-col items-center gap-4 md:flex-row">
-                <img src="pic/aboutus/5.jpg" alt="" class="w-1/2 rounded-2xl">
-                <div class="flex flex-col gap-4">
+                <img src="pic/aboutus/5.jpg" alt="" class="w-1/2 rounded-2xl transition-opacity duration-[3000ms] opacity-0" id="section2pic">
+                <div class="flex flex-col gap-4 [&>p]:transition [&>p]:duration-1000 overflow-hidden">
                     <h2>友善新手</h2>
-                    <p>我們堅持所有功能與介面都要對新手友善，植物圖鑑的說明也力求簡單易懂，避免使用過於專業的術語。</p>
+                    <p class="section2">我們堅持所有功能與介面都要對新手友善，植物圖鑑的說明也力求簡單易懂，避免使用過於專業的術語。</p>
                     <h2>資料的準確性</h2>
-                    <p>圖鑑中的每一筆資料，我們都參考了專業的園藝文獻與經驗豐富的植人建議，並會持續更新，確保資訊的準確與實用。</p>
+                    <p class="section2">圖鑑中的每一筆資料，我們都參考了專業的園藝文獻與經驗豐富的植人建議，並會持續更新，確保資訊的準確與實用。</p>
                     <h2>科技為輔，自然為主</h2>
-                    <p>我們相信科技是輔助工具，真正的主角是您與您的植物。我們的提醒功能旨在幫助您建立好習慣，而不是取代您與植物互動的樂趣。</p>
+                    <p class="section2">我們相信科技是輔助工具，真正的主角是您與您的植物。我們的提醒功能旨在幫助您建立好習慣，而不是取代您與植物互動的樂趣。</p>
                 </div>
             </div>            
         </section>
@@ -94,5 +94,6 @@
         </div>
     </footer>
     <script src="hamburger.js"></script>
+    <script src="aboutus.js"></script>
 </body>
 </html>

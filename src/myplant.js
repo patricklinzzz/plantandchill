@@ -179,22 +179,25 @@ let alarmDay = document.getElementById('alarm-day')
 let preWatering = document.getElementById('pre-watering')
 let nextWatering = document.getElementById('next-watering')
 function remainday() {
-    let nowdate = new Date()
-    let preWdate = new Date(preWatering.value)
+    let nowdate = new Date().setHours(0, 0, 0, 0)
+    let preWdate = new Date(preWatering.value).setHours(0, 0, 0, 0)
     let alarmDayValue = alarmDay.value
     let remainDay = alarmDayValue - Math.floor((nowdate - preWdate) / (1000 * 60 * 60 * 24))
+    nextWatering.style.color = '#4d4012'
+    console.log(nowdate, preWdate, remainDay);
+    const futureDate = new Date(new Date().setDate(new Date().getDate() + (remainDay + 1)))
+    const year = futureDate.getFullYear()
+    const month = futureDate.getMonth() + 1
+    const day = futureDate.getDate()
+    const formattedDate = `${year}/${month}/${day}`
     if (remainDay == 0) {
         nextWatering.innerText = '明天'
-        nextWatering.style.color = '#4d4012'
     } else if (remainDay == 1) {
         nextWatering.innerText = '後天'
-        nextWatering.style.color = '#4d4012'
     } else if (remainDay < 0) {
         nextWatering.innerText = '今天'
-        nextWatering.style.color = '#4d4012'
     } else {
-        nextWatering.innerText = remainDay+1 + '天後'
-        nextWatering.style.color = '#4d4012'
+        nextWatering.innerText = remainDay + 1 + '天後 ' + formattedDate
     }
 }
 preWatering.addEventListener('input', remainday)
@@ -220,11 +223,11 @@ settime.addEventListener('change', function () {
             clearInterval(alarmTimerId);
         }
         alarmTimerId = setInterval(() => {
-            let nowdate = new Date()
-            let preWdate = new Date(preWatering.value)
+            let nowdate = new Date().setHours(0, 0, 0, 0)
+            let preWdate = new Date(preWatering.value).setHours(0, 0, 0, 0)
             let alarmDayValue = alarmDay.value
             let remainDay = alarmDayValue - Math.floor((nowdate - preWdate) / (1000 * 60 * 60 * 24))
-            let currentTime = String(nowdate.getHours()).padStart(2, '0') + ':' + String(nowdate.getMinutes()).padStart(2, '0')
+            let currentTime = String(new Date().getHours()).padStart(2, '0') + ':' + String(new Date().getMinutes()).padStart(2, '0')
             if (currentTime == timeinput && watering_chk.checked && remainDay < 0) {
                 new Notification('該澆花囉!')
                 clearInterval(alarmTimerId)
