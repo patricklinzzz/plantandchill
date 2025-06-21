@@ -24,3 +24,42 @@ window.document.addEventListener('scroll', function () {
         }
     })
 })
+//bee
+let bee = document.getElementById('bee')
+let i = 1
+let X = 0
+let Y = 0
+let lag = false
+setInterval(function () {
+    bee.setAttribute('src', 'pic/bee/' + i + '.png')
+    i++
+    if (i > 3) {
+        i = 1
+    }
+}, 200)
+
+window.addEventListener('scroll', function () {
+    if (lag) {
+        return
+    }
+    lag = true
+    setTimeout(function () {
+        lag = false
+    }, 1100)
+
+    let addX = Math.random() * 80 - 40
+    let addY = Math.random() * 60 - 30
+    X += addX
+    Y += addY
+    if (X > 40) X = 40
+    if (X < -40) X = -40
+    if (Y > 30) Y = 30
+    if (Y < -30) Y = -30
+    let scaleX = 1
+    if (addX < 0) {
+        scaleX = -1
+    } else {
+        scaleX = 1
+    }
+    bee.style.transform = `translate(${X}vw, ${Y}vh) scaleX(${scaleX})`
+})
