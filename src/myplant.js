@@ -211,10 +211,8 @@ settime.addEventListener('change', function () {
     let timeinput = settime.value
     Notification.requestPermission().then(permission => {
         if (permission === 'granted') {
-            // 如果使用者同意，就設定鬧鐘
             setAlarm(timeinput);
         } else {
-            // 如果使用者拒絕，給予提示
             alert('您已拒絕顯示通知')
         }
     });
